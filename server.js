@@ -11,7 +11,7 @@ var options = {
 };
 
 // HTTPs server
-var app = require('https').createServer(options, function(request, response) {
+var app = require('http').createServer(options, function(request, response) {
     response.writeHead(200, {
         'Content-Type': 'text/html'
     });
