@@ -6,9 +6,13 @@ const express = require('express');
 const socketIO = require('socket.io');
 
 const server = express()
+    .use((req, res, next) => {
+        res.header("Access-Control-Allow-Origin", "*:*"); // update to match the domain you will make the request from
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+    })
     .use(((req, res) => res.send('WEBSOCKET SERVER FOR WEBRTC SIGNALING')))
     .listen(PORT, () => console.log(`Listening on ${PORT}`))
-
 // var app = express().listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 // socket.io goes below
