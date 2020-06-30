@@ -6,7 +6,7 @@ const express = require('express');
 const socketIO = require('socket.io');
 
 const server = express()
-    .use(((req, res) => res.write('WEBSOCKET SERVER FOR WEBRTC SIGNALING')))
+    .use(((req, res) => res.send('WEBSOCKET SERVER FOR WEBRTC SIGNALING')))
     .listen(PORT, () => console.log(`Listening on ${PORT}`))
 
 // var app = express().listen(PORT, () => console.log(`Listening on ${PORT}`));
