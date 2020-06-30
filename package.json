@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "socket.io": "^2.3.0",
-    "express":"^4.17.1"
+    "express": "^4.17.1"
   },
   "bugs": {
     "url": "https://github.com/muaz-khan/WebRTC-Experiment/issues"
